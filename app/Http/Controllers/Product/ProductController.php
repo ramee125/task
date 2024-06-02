@@ -6,20 +6,37 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Product\ProductCreateRequest;
 use App\Http\Requests\Product\ProductUpdateRequest;
-
+use Illuminate\Contracts\View\View;
 
 class ProductController extends Controller
 {
-    public function index()
+    /**
+     * Undocumented function
+     *
+     * @return view
+     */
+    public function index(): View
     {
         $response['products']=Product::all();
         return view('pages.Product.all.index')->with(key:$response);// Implementation for index method
     }
 
+    /**
+     * method.create
+     *
+     * @return view
+     */
+
     public function create()
     {
         return view('pages.Product.create.index');
     }
+
+    /**
+     * method.store
+     * @param.ProductCreateRequest.$request[Product.creat.request]
+     * @return.void
+     */
 
     public function store(ProductCreateRequest $request)
     {
