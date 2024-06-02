@@ -4,7 +4,7 @@
     <h1>This is home</h1>
      <a href=" {{route("contactus")}}"> ContactUs </a>
      <a href=" {{route("aboutus")}}"> AboutUs </a>
-    <h1>Hello, world!</h1>
+    <h1>Hello, laravel</h1>
 
     <form action="{{route('home.store')}}" method="post">
         @csrf
