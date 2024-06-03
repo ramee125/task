@@ -15,7 +15,7 @@ class ProductController extends Controller
      *
      * @return view
      */
-    public function index(): View
+    public function index()
     {
         $response['products']=Product::all();
         return view('pages.Product.all.index')->with(key:$response);// Implementation for index method
